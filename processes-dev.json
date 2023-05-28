@@ -1,0 +1,15 @@
+{
+  "apps": [
+      {
+          "name": "api",
+          "script": "./index.js",
+          "watch": true,
+          "watch_delay": 1000,
+          "merge_logs": true,
+          "env": {
+            "NODE_PATH": "./app",
+            "NODE_ENV": "develop",
+          }
+      }
+  ]
+}
