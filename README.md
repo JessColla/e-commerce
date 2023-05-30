@@ -22,6 +22,7 @@ Este é um projeto de exemplo para uma plataforma de e-commerce desenvolvida em 
 - **[dotENV](https://github.com/motdotla/dotenv)**
 - **[Joi](https://github.com/hapijs/joi)**
 - **[Mocha](https://mochajs.org/)**
+- **[Typescript](https://www.typescriptlang.org/)**
 
 ## 🚀 Configuração do Projeto
 
