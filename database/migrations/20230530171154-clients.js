@@ -1,11 +1,10 @@
-"use strict";
+'use strict'
 
 /** @type {import('sequelize-cli').Migration} */
-
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("product", {
-      idProduct: {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.createTable('client', {
+      idClient: {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.INTEGER,
@@ -14,46 +13,46 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      description: {
-        allowNull: false,
-        type: Sequelize.TEXT,
-      },
-      category: {
+      cpf: {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      value: {
-        allowNull: false,
-        type: Sequelize.DECIMAL(10, 2),
-      },
-      quantity: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-      },
-      image: {
+      address: {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      supplier: {
+      telephone: {
         allowNull: false,
         type: Sequelize.STRING,
+      },
+      birthday: {
+        allowNull: false,
+        type: Sequelize.DATEONLY,
       },
       registration_date: {
         allowNull: false,
         type: Sequelize.DATE,
       },
+      email: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      password: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      idUser: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
-      },
-    });
+    })
   },
 
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("product");
+  async down(queryInterface, Sequelize) {
+    await queryInterface.dropTable('client')
   },
-};
+}

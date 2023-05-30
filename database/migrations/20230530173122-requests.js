@@ -1,34 +1,25 @@
-"use strict";
+'use strict'
 
 /** @type {import('sequelize-cli').Migration} */
-
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("shopping_cart", {
-      idShopping_cart: {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.createTable('request', {
+      idRequest: {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      idProduct: {
+      idClient: {
         allowNull: false,
         type: Sequelize.INTEGER,
       },
-      idRequest: {
+      idShopping_cart: {
         allowNull: false,
         type: Sequelize.INTEGER,
       },
-      quantity: {
+      amount: {
         allowNull: false,
         type: Sequelize.INTEGER,
-      },
-      Requests_idRequest: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: "request",
-          key: "idRequest",
-        },
       },
       createdAt: {
         allowNull: false,
@@ -38,10 +29,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
-    });
+    })
   },
 
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("shopping_cart");
+  async down(queryInterface, Sequelize) {
+    await queryInterface.dropTable('users')
   },
-};
+}

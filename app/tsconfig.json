@@ -1,0 +1,15 @@
+  {
+    "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "types": ["node", "sequelize-typescript"],
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true
+  },
+  "include": ["app/**/*"],
+  "exclude": ["node_modules"]
+}

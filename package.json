@@ -27,12 +27,15 @@
     "joi": "^17.9.2",
     "joi-translation-pt-br": "^0.0.6",
     "mocha": "^10.2.0",
-    "mysql2": "^3.3.1",
+    "mysql2": "^3.3.3",
     "path": "^0.12.7",
     "sequelize": "^6.31.1",
+    "sequelize-typescript": "^2.1.5",
+    "typescript": "^5.0.4",
     "utf8": "^3.0.0"
   },
   "devDependencies": {
+    "@types/sequelize": "^4.28.15",
     "eslint": "^8.4.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
